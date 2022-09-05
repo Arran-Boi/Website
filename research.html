@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <!------------------------------BODY------------------------------------------------>
+
+        <!---------------------------------------------------->
+        <header>
+            <!--Use Flexbox to create the navigation bar-->
+            <div class="flexbox-container">
+                <div class="box-1">
+                    <img src="MEDIA/global.png" alt="Logo" />
+                </div>
+
+                <div class="box-2">
+                    <p class="tagline">ITWD6.408 </p>
+                </div>
+
+                <div class="box-3">
+                    <div class="horizontal-nav">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="form.html">FORMS</a></li>
+                            <li><a href="xml-json.html">XML-JSON</a></li>
+                            <li><a href="js-demo.html">JAVASCRIPT</a></li>
+                            <li class="active"><a href="research.html">RESEARCH</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-4 nav-open-button">
+                    <p onclick="openNav()">≡</p>
+                </div>
+            </div>
+
+            <!--Curtain menu: collapse this menu as default when loading the page-->
+            <nav id="curtain-nav">
+                <!--Add a close button (X) hyperlink on the top left corner-->
+                <a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+                <div class="curtain-nav-content">
+                    <ul>
+                        <li class="active"><a href="index.html">HOME</a></li>
+                        <li><a href="fomrs.html">FORMS</a></li>
+                        <li><a href="xml-jsaon.html">XML/JSON</a></li>
+                        <li><a href="js-demo.html">JAVASCRIPT</a></li>
+                        <li><a href="research.html">RESEARCH</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+    </header>
+    <main class="re-main">
+        <div class="re-grid-container">
+			<div class="flip-box item1">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h5>Copyright, Creative Common (CC) Licenses, Fair Use: </h5>
+						<img src="MEDIA/copyright.jpg" alt="HTML" class="re-imgs">
+					</div>
+					<div class="flip-box-back">
+						<p>Copyright law gives the creator certain control abilities over their work. If people want to use copyrighted material, they often want to use copyrighted material, they have to ask permission from the original author. Creative commons works within the copyright law. It allows authors to freely give there permission to use their work in a specific use.<a href="https://creativecommons.org/"><br>Creative commons</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-box item1">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h5>Privacy & Privacy Policy: </h5>
+						<img src="MEDIA/privacy.jpg" alt="HTML" class="re-imgs">
+					</div>
+					<div class="flip-box-back">
+						<p>A privacy Policy is a statement or a legal document that states how a company or website collects, handles and processes data of its customers and visitors. It specificity describes whether information is kept confidentially, or is shared with or singly to a third party. <a href="https://www.privacypolicies.com/blog/privacy-policy-template/#:~:text=A%20Privacy%20Policy%20is%20a,or%20sold%20to%20third%20parties."><br>Privacy Policy</a></p>
+                    </div>
+				</div>
+			</div>
+
+			<div class="flip-box item1">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h5>Search Engine Optimization (SEO): </h5>
+						<img src="MEDIA/seo.jpg" alt="HTML" class="re-imgs">
+					</div>
+					<div class="flip-box-back">
+						<p>SEO means "Search Engine Optimization." In simple terms, it means the processes of improving your site to increase its visibility when people search for a product or services related to your business in Google, Bing or another search engines. The more visibility you have on your page increases your attention and attracts prospective and existing customers to your business.<a href="https://searchengineland.com/guide/what-is-seo"><br>SEO</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-box item1">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h5>Web Publishing: </h5>
+						<img src="MEDIA/web-hosting.jpg" alt="HTML" class="re-imgs">
+					</div>
+					<div class="flip-box-back">
+						<p>Web publishing is the process of publishing original content on the Internet.
+                            The process includes building and uploading websites, updating the associated webpages, and posting content to these webpages online. Web publishing comprises of personal, business, and community websites in addition to e-books and blogs.<a href="https://www.techopedia.com/definition/10012/web-publishing#:~:text=Web%20publishing%20is%20the%20process,to%20e%2Dbooks%20and%20blogs."><br>Web Publishing</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-box item1">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h5>Web Performance & Maintenance: </h5>
+						<img src="MEDIA/web-performance.jpg" alt="HTML" class="re-imgs">
+					</div>
+					<div class="flip-box-back">
+						<p>Maintaining a website’s performance is second nature to our development team. The real value they offer is identifying and implementing enhancements to further elevate your brand.<a href="https://strategiq.co/what-we-do/tech/web-maintenance/"><br>Web Performance and Maintenance</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-box item1">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h5>Web security: </h5>
+						<img src="MEDIA/web-security.jpg" alt="HTML" class="re-imgs">
+					</div>
+					<div class="flip-box-back">
+						<p>Web security refers to protecting networks and computer systems from damage to or the theft of software, hardware, or data. It includes protecting computer systems from misdirecting or disrupting the services they are designed to provide.<a href="https://www.fortinet.com/resources/cyberglossary/what-is-web-security#:~:text=Web%20security%20refers%20to%20protecting,they%20are%20designed%20to%20provide."><br>Web Security</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+    </main>
+</body>
+
+<!---------------------------------------------------->
+<!--Footer section-->
+<footer>
+    <div> @Created by: Arun Veluwa<br />
+        Contact me at: <a href="arunveluwa@gnail.com">arunveluwa@gnail.com</a><!--Misspelt on purpose -->
+    </div>
+</footer>
+
+<!--Embed the js file at the bottom of the html file-->
+<script type="text/javascript" src="JS/javascript.js">
+</script>
+
+<!--Embed the js file at the bottom of the html file-->
+<script type="text/javascript" src="JS/javascript.js"></script>
+
+<!--Optional JavaScript-->
+<!--jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+
+</body>
+
+</html>

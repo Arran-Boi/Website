@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<!------------------------------HEAD------------------------------------------------>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Website</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<body>
+
+	<!---------------------------------------------------->
+	<header>
+		<!--Use Flexbox to create the navigation bar-->
+		<div class="flexbox-container">
+			<div class="box-1">
+				<img src="MEDIA/global.png" alt="Logo" />
+			</div>
+
+			<div class="box-2">
+				<p class="tagline">ITWD6.408 </p>
+			</div>
+
+			<div class="box-3">
+				<div class="horizontal-nav">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li class="active"><a href="form.html">FORMS</a></li>
+						<li><a href="xml-json.html">XML/JSON</a></li>
+						<li><a href="js-demo.html">JAVASCRIPT</a></li>
+						<li><a href="research.html">RESEARCH</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="box-4">
+				<p onclick="openNav()">≡</p>
+			</div>
+		</div>
+
+		<!--Curtain menu: collapse this menu as default when loading the page-->
+		<nav id="curtain-nav">
+			<!--Add a close button (X) hyperlink on the top left corner-->
+			<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li class="active"><a href="Index.html">HOME</a></li>
+					<li><a href="form.html">FORM</a></li>
+					<li><a href="xml-json.html">XML/JSON</a></li>
+					<li><a href="js-demo.html">JAVASCRIPT</a></li>
+					<li><a href="research.html">RESEARCH</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container-fluid">
+		<div class="row">
+			<!--Button section-->
+			<div class="col-12 col-md-2">
+				<div class="container-fluid">
+					<div class="row justify-content-around">
+						<!--Button 1-->
+						<button class="col-6 col-md-12 btn btn-primary bg-warning" type="button"
+							data-bs-toggle="collapse" data-bs-target="#button1" aria-expanded="false"
+							aria-controls="button1">HTML FORM</button>
+						<!--Button 1-->
+						<button class="col-6 col-md-12 btn btn-primary" type="button" data-bs-toggle="collapse"
+							data-bs-target="#button2" aria-expanded="false" aria-controls="button2">GOOGLE FORM</button>
+					</div>
+				</div>
+			</div>
+
+			<!--Main content section-->
+			<div class="w-100 p-3">
+				<div class="row">
+					<div class="col-12">
+						<!--Content area 1 for button 1-->
+						<div class="collapse show multi-collapse" id="button1">
+							<div class="card card-body">HTML FORM HERE<br>
+								<div class="row g-3">
+									<div class="col-12">
+										<br>
+										<label>First Name</label><input type="text" class="form-control"
+											placeholder="First name" aria-label="First name">
+									</div>
+									<br>
+									<div class="col-12">
+										<label>Last Name</label><input type="text" class="form-control"
+											placeholder="Last name" aria-label="Last name">
+									</div>
+									<br>
+									<div class="col-12">
+										<label for="inputEmail4" class="form-label">Email</label>
+										<input type="email" class="form-control" id="inputEmail4"
+											placeholder="Email Address">
+									</div>
+									<br>
+									<div class="col-12">
+										<h5>Gender</h5>
+										<input type="radio" id="female" name="gender" value="name">
+										<label for="html">Female</label><br>
+										<input type="radio" id="male" name="gender" value="name">
+										<label for="css">Male</label><br>
+										<input type="radio" id="other" name="gender" value="name">
+										<label for="javascript">Other</label>
+									</div>
+									<br>
+									<form action="/action_page.php">
+										<label for="phone">Phone provider:</label>
+										<select name="phones" id="phone">
+										  <option value="2degress">2degress</option>
+										  <option value="spark">Spark</option>
+										  <option value="vodaphone">Vodaphone</option>
+										  <option value="other">Other</option>
+										</select>
+									  </form>
+									<br>
+									<div>
+										<h5>Do you use your phone for study?</h5>
+										<label>Comment: </label><br>
+										<textarea id="comment_text" cols="25" rows="5">
+							            </textarea>
+										<br>
+										<button onclick="addComment()">POST</button>
+										</section>
+									</div>
+									<div class="col-12">
+										<label for="inputAddress" class="form-label">Address</label>
+										<input type="text" class="form-control" id="inputAddress"
+											placeholder="Your Address...">
+									</div>
+									<br>
+									<div class="col-12">
+										<label for="inputAddress2" class="form-label">Address 2</label>
+										<input type="text" class="form-control" id="inputAddress2"
+											placeholder="Your Address...">
+									</div>
+									<br>
+									<div class="col-12">
+										<label for="inputCity" class="form-label">City</label>
+										<input type="text" class="form-control" id="inputCity" placeholder="City">
+									</div>
+									<br>
+									<div class="col-12">
+										<label for="inputState" class="form-label">Country</label>
+										<select id="inputState" class="form-select">
+											<option selected>Choose...</option>
+											<option>New Zealand</option>
+											<option>Australia</option>
+											<option>Other...</option>
+										</select>
+									</div>
+									<br>
+									<div class="col-md-4">
+										<label for="inputZip" class="form-label">Zip Code</label>
+										<input type="text" class="form-control" id="inputZip" placeholder="Zip Code">
+										<br>
+										<div class="col-md-4">
+											<button type="submit" class="btn btn-primary">Submit</button>
+										</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--Content area for button 2-->
+						<div class="col-12">
+							<div class="collapse multi-collapse" id="button2">
+								<div class="card card-body">GOOGLE FORM HERE<br>
+									<iframe
+										src="https://docs.google.com/forms/d/e/1FAIpQLSf8A9XQqLomvZ5wAlRADF1vSzUBc_LLYIC5WtplxWVZdgOYbQ/viewform?embedded=true"
+										width="640" height="955" frameborder="0" marginheight="0"
+										marginwidth="0">Loading…</iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!---------------------------------------------------->
+		<!--Footer section-->
+		<footer>
+			<div> @Created by: Arun Veluwa <br />
+				Contact me at: <a href="arunveluwa@gnail.com">arunveluwa@gnail.com</a><!--Misspelt on purpose -->
+			</div>
+		</footer>
+
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+		</script>
+		<script type="text/javascript" src="JS/javascript.js">
+		</script>
+</body>
+
+
+
+</html>

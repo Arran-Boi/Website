@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Website</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+
+<body>
+	<!---------------------------------------------------->
+	<header>
+		<!--Use Flexbox to create the navigation bar-->
+		<div class="flexbox-container">
+			<div class="box-1">
+				<img src="MEDIA/global.png" alt="Logo" />
+			</div>
+
+			<div class="box-2">
+				<p class="tagline">ITWD6.408 </p>
+			</div>
+
+			<div class="box-3">
+				<div class="horizontal-nav">
+					<ul>
+						<li class="active"><a href="index.html">HOME</a></li>
+						<li><a href="form.html">FORMS</a></li>
+						<li><a href="xml-json.html">XML/JSON</a></li>
+						<li><a href="js-demo.html">JAVASCRIPT</a></li>
+						<li><a href="research.html">RESEARCH</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="box-4">
+				<p onclick="openNav()">≡</p>
+			</div>
+		</div>
+
+		<!--Curtain menu: collapse this menu as default when loading the page-->
+		<nav id="curtain-nav">
+			<!--Add a close button (X) hyperlink on the top left corner-->
+			<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li class="active"><a href="Index.html">HOME</a></li>
+					<li><a href="form.html">FORM</a></li>
+					<li><a href="xml-json.html">XML/JSON</a></li>
+					<li><a href="js-demo.html">JAVASCRIPT</a></li>
+					<li><a href="research.html">RESEARCH</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!---------------------------------------------------->
+	<!--Main content section-->
+	<main>
+		<section class="section-intro">
+			<div class="bg-image"></div>
+			<div class="bg-text">
+				<h3>Advanced Internet and Web Learning Portfolio</h3>
+				<h1>I am Arun Veluwa</h1>
+				<h4>And I am a Web Developer</h4>
+			</div>
+		</section>
+
+		<section class="bio">
+			<div>
+				<h1>Biography:</h1>
+			</div>
+			<div><img src="MEDIA/portrait-icon.jpg" alt="icon" width="100" height="100">
+				<div></div>
+				<p>
+					About: Arun Veluwa, I am a student at EIT (Eastern Institute of Technology) in
+					Hawks bay New Zealand, I am currently in my second year of the BSC (Batchelor of Computer Systems)
+					program.
+				</p>
+		</section>
+
+		<section class="webtechno">
+			<div>
+				<h1>Web Technologies</h1>
+			</div>
+			<ol>
+				<li><a href="https://www.google.com/chrome/">Google Chrome</a>
+					<p>Google Chrome Internet Browser</p>
+				</li>
+				<li><a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>
+					<p>Mozilla Internet Browser</p>
+				</li>
+				<li><a href="https://www.apple.com/safari/">Apple Safari</a>
+					<p>Apple Internet Browser</p>
+				</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>
+					<p>Hyper Markup Language</p>
+				</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
+					<p>Cascading Style Sheets</p>
+				</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS</a>
+					<p>JavaScript</p>
+				</li>
+			</ol>
+		</section>
+
+		<section class="experiance grid-container">
+			<div>
+				<h2>Experiance</h2>
+			</div>
+			<div class="flip-box item1">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h1>Markup (HTML)</h1>
+						<img src="MEDIA/html5.png" alt="HTML" class="imgs">
+					</div>
+					<div class="flip-box-back">
+						<p>Hypertext Markup Language, a standardized system for tagging text files to achieve font,
+							color, graphic, and hyperlink effects on World Wide Web pages:</p>
+					</div>
+				</div>
+			</div>
+			<div class="flip-box item2">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h1>Styling (CSS)</h1>
+						<img src="MEDIA/css3.png" alt="CSS" class="imgs">
+					</div>
+					<div class="flip-box-back">
+						<p>style sheet language used for describing the presentation of a document written in a markup
+							language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).</p>
+					</div>
+				</div>
+			</div>
+			<div class="flip-box item3">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h1>JavaScript (JS)</h1>
+						<img src="MEDIA/javascript.png" alt="JS" class="imgs">
+					</div>
+					<div class="flip-box-back">
+						<p>an object-oriented computer programming language commonly used to create interactive effects
+							within web browsers.</p>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="statement statement-text">
+			<h2>Statement of Authenticity:</h2>
+			<p>
+				“I confirm that:
+				This is an original assessment and is entirely my own work.
+				It contains no material previously published or written by another person or myself except where due
+				acknowledgement
+				is made in the text. No material which to a substantial extent, has been submitted for any other
+				academic
+				course, is
+				included without acknowledgement."
+			</p>
+		</section>
+	</main>
+
+
+
+	<!---------------------------------------------------->
+	<!--Footer section-->
+	<footer>
+		<div> @Created by: Arun Veluwa <br />
+			Contact me at: <a href="arunveluwa@gnail.com">arunveluwa@gnail.com</a><!--Misspelt on purpose -->
+		</div>
+	</footer>
+
+	<!--Embed the js file at the bottom of the html file-->
+	<script type="text/javascript" src="JS/javascript.js">
+	</script>
+
+</body>
+
+</html>

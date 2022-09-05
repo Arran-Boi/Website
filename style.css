@@ -1,0 +1,682 @@
+/*-------------------------------------------------*/
+/* MOBILE FIRST APPROACH
+   All the below CSS styles are valid for Mobile (small) devices
+   Link: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+  
+   CSS Relative Unit
+   Link: https://www.w3schools.com/cssref/css_units.asp
+         https://css-tricks.com/css-font-size/
+         https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+/*main header adjustment*/
+h1 {
+	text-align: center;
+}
+
+/*secondary header adjustment*/
+h2 {
+	text-align: left;
+
+}
+
+/*additional header adjustment*/
+h3 {
+	text-align: center;
+}
+
+h4 {
+	text-align: center;
+}
+
+h5 {
+	text-align: left;
+	font-size: none;
+}
+
+/*unordered list*/
+ul {
+	padding: 25px;
+}
+
+/*paragraph adjustment*/
+p {
+	font-size: large;
+	padding: 10px;
+	text-align: left;
+}
+
+
+/*Main area*/
+main {
+	display: flex grid;
+	background-color: #DAF7A6;
+	min-height: 85vh;
+	background-color: none;
+	text-align: center;
+	grid-template-areas: "area-1 area-1""area-2 area-3""area-4 area-4""area-5 area-5";
+}
+
+label {
+	text-align: left;
+}
+
+
+
+/*main body*/
+body {
+	background: #f4f4f4;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	/*Set the baseline font size for the whole website*/
+	background-color: #DAF7A6;
+	margin: none;
+}
+
+/*Footer Area*/
+footer {
+	height: 10vh;
+	background-color: #DAF7A6;
+	text-align: center;
+
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*main section adjustment*/
+
+/*Header Area*/
+/*---------------------------------*/
+/*CSS flexbox: 1D Card Layout
+  Link 1: https://codelikethis.com/lessons/responsive-layout/flexbox-layout 
+  Link 2: https://medium.com/@merveyuksek/webpage-layout-examples-with-flexbox-88287f010a08
+*/
+
+/*horizontal nav*/
+.horizontal-nav {
+	display: none; /*Hide on mobile devices*/
+}
+   
+/*Curtain menu*/
+nav {
+	padding: 10px 10px 10px 10px;/*10px 10px 10px 10px*/
+	overflow: visible;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+nav ul li {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;	
+}
+
+nav ul li ul li {
+	background: #555; 
+	display: block; 
+	font-size: 1em;
+}
+
+nav ul li ul li a {
+	display: block; 
+	text-align: left;
+
+}
+
+nav ul li.dropdown:hover ul {
+	display: block;
+}
+
+
+#curtain-nav {
+	height: 70%;/*100%*/
+	width: 0;/*Hide it as default when loading page*/
+	padding: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0; 
+	right: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;	
+}
+
+.curtain-nav-content {
+	/*For curtain menu*/
+	position: relative;
+	top: 15%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;	
+	overflow: visible;
+}
+
+.nav-open-button {
+	font-size: 4.0em;
+}
+
+.nav-close-button {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 1.0em;
+	color: white;
+	text-decoration: none;
+}
+
+/*Set hover effect for items in the menu*/
+.active {
+	background-color: #FF9633;
+}
+
+li:hover:not(.active) {
+	background-color: green;
+}
+
+
+/*-------------------------------------------------*/
+/*RESPONSIVE CSS*/
+/*THUMB RULE: Mobile First
+  Use min-width to detect device screen size.
+  min-width: 768px means that "when viewport is 768px or larger (Tablet or PC), set these styles; 
+             otherwise (Mobile) set above styles"  
+*/
+
+/*define section for main area*/
+
+.section-intro {
+	grid-area: area-1;
+	display: flex;
+	min-height: 15vh;
+	position: relative;
+	height: 40vh;
+}
+
+.bg-image {
+	/* The image used */
+	background-image: url("../MEDIA/javascript-code.jpg");
+
+	/* Add the blur effect */
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+
+	/* Full height */
+	height: 100%;
+	width: 100%;
+	right: 10%;
+	left: 10%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+	min-height: 15vh;
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 80%;
+	padding: 10px;
+	margin: 10px;
+}
+
+.bio {
+	grid-area: area-2;
+	height: 80vh;
+	background-color: #f1c40f;
+	text-align: left;
+	margin: 10px;
+	padding: 10px;
+}
+
+.webtechno {
+	grid-area: area-3;
+	height: 80vh;
+	background-color: #ec7063;
+	text-align: left;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.experiance {
+	grid-area: area-4;
+	min-height: 15vh;
+	margin-top: 10px;
+	background-color: #DAF7A6;
+}
+
+.imgs {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+.re-imgs {
+	width: 150px;
+	height: 150px;
+}
+
+.statement {
+	grid-area: area-5;
+	min-height: 15vh;
+	background-color: #ff7f50;
+	text-align: left;
+	margin: 10px;
+	padding: 10px;
+}
+
+.flexbox-container {
+	/*flexbox container*/
+	display: flex;
+	flex-direction: row;
+	/*display on a row => horizontally*/
+
+	background-color: #DAF7A6;
+	height: 25vh;
+}
+
+.flip-box {
+	background-color: transparent;
+	width: 400px;
+	height: 300px;
+	border: blue 10px;
+	perspective: 1000px;
+	padding: 25px;
+	text-align: center;
+}
+
+.flip-box-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: blue 10px;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+	position: absolute;
+	border: blue 10px;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-box-front {
+	background-color: lightblue;
+	color: black;
+	border: blue 10px;
+}
+
+.flip-box-back {
+	background-color: lightblue;
+	color: black;
+	transform: rotateY(180deg);
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 10px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.grid-container>nav {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.item {
+	grid-row: 1 / 2;
+}
+
+.box-1 {
+	flex: 0;
+	display: flex;
+	justify-content: auto;
+	align-items: center;
+	/*wrap the content*/
+}
+
+.box-2 {
+	flex: 1;
+
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	font-size: 1.5em;
+	justify-content: left;
+	align-items: center;
+}
+
+.box-3 {
+	flex: 4;
+	/*horizontal nav on desktop*/
+
+	/*Centering the content both vertical and horizontal*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-4 {
+	flex: 1;
+	/*Curtain menu*/
+
+	font-size: 4.0em;
+	color: black;
+	cursor: pointer;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+
+/* For desktop: */
+.col-1 {
+	width: 8.33%;
+}
+
+.col-2 {
+	width: 16.66%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33%;
+}
+
+.col-5 {
+	width: 41.66%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33%;
+}
+
+.col-8 {
+	width: 66.66%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-10 {
+	width: 83.33%;
+}
+
+.col-11 {
+	width: 91.66%;
+}
+
+.col-12 {
+	width: 100%;
+	display: flex row;
+	text-align: left;
+}
+
+.dropbtn {
+	background-color: #3498DB;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+	background-color: #2980B9;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+	/* For mobile phones: */
+	[class*="col-"] {
+		width: 100%;
+	}
+
+	[class*="box-"] {
+		width: 100%;
+	}
+
+	/*Make Horizontal nav visible*/
+	.horizontal-nav {
+		display: block;
+
+		background-color: #DAF7A6;
+		padding: 10px 10px 10px 10px;
+	}
+
+	.horizontal-nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.horizontal-nav ul li {
+		display: inline-block;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.0em;
+	}
+
+	.horizontal-nav ul li a {
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	.horizontal-nav ul li:hover:not(.active) {
+		background-color: green;
+	}
+
+	.iframe {
+		position: relative;
+		width: 500px;
+		height: 600px;
+	}
+
+	section {
+		text-align: center;
+		float: middle;
+		padding: 5px;
+	}
+
+	body {
+		text-align: center;
+		float: middle;
+		padding: 5px
+	}
+}
+
+/* javascript page left nav pannel*/
+.sidenav {
+	width: 130px;
+	position: fixed;
+	z-index: 1;
+	top: 20px;
+	left: 10px;
+	background: #eee;
+	overflow-x: hidden;
+	padding: 8px 0;
+}
+
+.sidenav a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #2196F3;
+	display: block;
+}
+
+.sidenav a:hover {
+	color: #064579;
+}
+
+.main {
+	margin-left: 140px;
+	/* Same width as the sidebar + left position in px */
+	font-size: 28px;
+	/* Increased text to enable scrolling */
+	padding: 0px 10px;
+}
+
+/* js grid */
+
+.js-grid-container {
+	display: grid;
+	height: 800px;
+	align-content: space-evenly;
+	grid-template-columns: auto auto auto;
+	gap: 10px;
+	background-color: none;
+	padding: 10px;
+	margin-bottom: 25%;;
+}
+
+.js-grid-container > div {
+	background-color: none (255, 255, 255, 0.8);
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+}
+
+.main {
+	/*js background image */
+	background-color: white;
+	text-decoration: none;
+	margin-left: 10%;
+	margin-right: 10%;
+	border: 2px black;
+	min-height: 50vh;
+}
+
+
+.js-title {/*js title*/
+	/* javascipt demo page */
+	font-size: large;
+	text-decoration: none;
+}
+
+.js-image {/*js images*/
+	height: 400px;
+
+}
+
+.js-text{ /*js text*/
+	padding: 20px;
+}
+
+.js-price { /*js price*/
+	text-align: left;
+}
+
+.js-comments { /*js comments*/
+	text-align: center;
+	font-size: large;
+}
+
+/* research grid*/
+
+.re-grid-container { /*research grid*/
+	align-content: center;
+	display: grid;
+	align-content: space-evenly;
+	grid-template-columns: auto auto auto;
+	gap: 10px;
+	background-color: lightcoral;
+	padding: 25px;
+  }
+  
+.re-grid-container > div { /*re grid 2*/
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+  }
+
+.re-main { /* research main area*/
+	align-content: center;
+	margin-right: 20%;
+	margin-left: 10%;
+}
+
+.container-fluid {
+	display: grid flex;
+	align-content: space-evenly;
+
+}
